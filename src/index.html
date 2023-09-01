@@ -18,13 +18,13 @@
 
  
 </head>
-<body class="font-overpass">
+<body class="font-overpass overflow-auto">
   
   <!-- HEADER -->
   <header class="top-0 fixed w-full transition-all duration-500 ease-in-out z-50" id="header">
     <div class="w-[90%] mx-auto py-3 pt-14 md:pt-8 max-w-screen-2xl">
       <!-- CONTAINER LOGO + NAV -->
-      <div class="flex justify-between items-center md:grid md:grid-cols-[70px,1fr] md:gap-10">
+      <div class="flex justify-between items-center md:grid md:grid-cols-[70px,1fr] md:gap-10 lg:grid-cols-[100px,1fr]">
         <!-- LOGO -->
         <figure class="z-20">
           <img src="../images/logo.svg" alt="Logo-Blogr" class="">
@@ -38,7 +38,7 @@
             <!-- MENU DE NAVEGACION -->
             <nav class="pt-7 md:pt-0 mx-auto w-10/12" id="nav-container">
               <!-- LINKS-LISTAS PRINCIPALES -->
-              <div class="md:flex md:gap-6 md:text-sm">
+              <div class="md:flex md:gap-6 lg:gap-10 md:text-sm lg:text-base">
                 <!-- PRODUCTO -->
                 <div class="">
                   <li class="link__nav">
@@ -48,9 +48,9 @@
                     </a>
                   </li>
                   <!-- DROPDOWN Product -->
-                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-5 md:bg-slate-100 top-full" id="dropdown">
+                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-6 md:py-6 drop-shadow-xl md:bg-White top-full" id="dropdown">
                     <!--- SUBMENU 1 -->     
-                    <ul class="grid gap-3 text-Verydarkdesaturatedblue/70 font-medium">
+                    <ul class="grid gap-3 text-Verydarkdesaturatedblue font-normal ul__list">
                       <li class="">
                         <a href="" class="">Overview</a>
                       </li>
@@ -78,9 +78,9 @@
                     </a>
                   </li>
                   <!-- DROPDOWN Company -->
-                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-5 md:bg-slate-100 top-full" id="dropdown">
+                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md rounded-md dropdown md:absolute md:px-6 md:py-6 drop-shadow-2xl md:bg-White top-full" id="dropdown">
                     <!--- SUBMENU 1 -->     
-                    <ul class="grid gap-3 text-Verydarkdesaturatedblue/70 font-medium">
+                    <ul class="grid gap-3 text-Verydarkdesaturatedblue font-normal ul__list">
                       <li class="">
                         <a href="" class="">About</a>
                       </li>
@@ -96,7 +96,8 @@
                     </ul>
                   </div>
                 </div>  
-                <!-- CONNECT -->
+
+                <!-- CONNECTS -->
                 <div class="">
                   <li class="link__nav">
                     <a href="" class="" id="nav-link">
@@ -105,9 +106,9 @@
                     </a>
                   </li>
                   <!-- DROPDOWN Connect -->
-                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-5 md:bg-slate-100 top-full" id="dropdown">
+                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-6 md:py-6 shadow-lg md:bg-White top-full" id="dropdown">
                     <!--- SUBMENU 1 -->     
-                    <ul class="grid gap-3 text-Verydarkdesaturatedblue/70 font-medium">
+                    <ul class="grid gap-3 text-Verydarkdesaturatedblue font-normal ul__list">
                       <li class="">
                         <a href="" class="">Contact</a>
                       </li>
@@ -123,9 +124,9 @@
               </div>   
             </nav>
             <!-- CONTAINER LOGIN - SING -->
-            <div class="grid gap-3 md:text-sm md:py-0 md:flex mx-auto md:items-center text-lg md:w-[unset] w-10/12 border-t-2 py-6 border-Grayishbluetext md:border-0">
-              <button class="w-40 md:w-24 mx-auto md:text-White">Login</button>
-              <button class="w-40 md:w-24 mx-auto bg-gradient-to-r rounded-3xl md:py-2 from-Verylightred to-Lightred text-White md:bg-none md:bg-White md:text-Lightred">Sign Up</button>
+            <div class="grid gap-3 md:text-sm lg:text-base md:py-0 md:flex mx-auto md:items-center text-lg md:w-[unset] w-10/12 border-t-2 py-6 border-Grayishbluetext md:border-0">
+              <button class="w-40 md:w-24 mx-auto md:text-White ease-in-out duration-300 hover:underline">Login</button>
+              <button class="w-40 md:w-24 mx-auto bg-gradient-to-r rounded-3xl md:py-2 from-Verylightred to-Lightred text-White md:bg-none md:bg-White md:text-Lightred hover:bg-Verylightred hover:text-White ease-in-out duration-500">Sign Up</button>
             </div>
           </div>
         </div>
@@ -138,7 +139,7 @@
     </div>
   </header>
 
-  <main class="">
+  <main class="" id="main">
     <div class="grid gap-24">
       <div class="container__main">
         <div class="w-[90%] mx-auto py-32">
@@ -147,15 +148,15 @@
             <h1 class="text-3xl md:text-4xl px-4 w-80 md:w-full md:w-96 md:px-0 mx-auto font-semibold text-White">A mordern publishing platform</h1>
             <p class="text-White/80 w-72 md:w-full text-lg mx-auto">Grow you audience and build your online brand</p>
             <div class="flex gap-5 justify-between mx-auto items-center mt-5">
-              <button class="bg-White text-Lightred font-semibold rounded-3xl py-2 px-3">Start for Free</button>
-              <button class="font-semibold text-White ring-2 ring-White rounded-3xl py-2 px-3">Learn More</button>
+              <button class="bg-White text-Lightred font-semibold rounded-3xl py-2 px-3 md:px-6 hover:bg-Verylightred hover:text-White ease-in-out duration-500">Start for Free</button>
+              <button class="font-semibold text-White ring-2 ring-White rounded-3xl py-2 px-3 md:px-6 hover:bg-White hover:text-Lightredtext ease-in-out duration-500">Learn More</button>
             </div>
           </section>
         </div>
       </div>
       <!-- Designed for the future container -->
       <section class="grid gap-5 text-center md:text-left max-w-screen-2xl mx-auto">
-        <h2 class="text-2xl font-bold text-center text-Verydarkblue">Designed for the future</h2>
+        <h2 class="text-2xl font-bold text-center text-Verydarkblue md:text-3xl">Designed for the future</h2>
         <div class="grid gap-8 md:grid-cols-[1fr,1fr] md:items-center"> 
           <div class="md:col-start-2 md:col-end-3 md:row-start-1">
             <img src="../images/illustration-editor-mobile.svg" alt="" class="block md:hidden">
@@ -227,7 +228,7 @@
     </div>
   </main>
 
-  <footer class="bg-Verydarkblackblue mt-20 py-20">
+  <footer class="bg-Verydarkblackblue mt-20 py-20" id="footer">
     <div class="grid justify-center gap-10 md:grid-cols-2 w-[90%] max-w-screen-2xl mx-auto">
       <figure class="">
         <img src="../images/logo.svg" alt="" class="">
@@ -237,7 +238,7 @@
   
         <div class="grid gap-4 grid-rows-[25px,1fr] justify-end">
           <h4 class="text-White text-lg font-semibold">Product</h4>
-          <ul class="text-Grayishbluetext leading-7">
+          <ul class="text-Grayishbluetext leading-7 footer__list">
             <li class="">
               <a href="" class="">Overview</a>
             </li>
@@ -258,7 +259,7 @@
   
         <div class="grid gap-4 grid-rows-[25px,1fr] justify-end">
           <h4 class="text-White text-lg font-semibold">Company</h4>
-          <ul class="text-Grayishbluetext leading-7 items-start">
+          <ul class="text-Grayishbluetext leading-7 items-start footer__list">
             <li class="">
               <a href="" class="">About</a>
             </li>
@@ -276,7 +277,7 @@
   
         <div class="grid gap-4 grid-rows-[25px,1fr] justify-end">
           <h4 class="text-White text-lg font-semibold h-4">Connect</h4>
-          <ul class="text-Grayishbluetext leading-7">
+          <ul class="text-Grayishbluetext leading-7 footer__list">
             <li class="">
               <a href="" class="">Contact</a>
             </li>

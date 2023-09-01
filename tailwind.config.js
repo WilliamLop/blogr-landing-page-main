@@ -9,8 +9,8 @@ module.exports = {
       },
       colors: {
         // ### Primary
-        "Lightred (CTA text)": "hsl(356, 100%, 66%)",
-        "Verylightred (CTA hover background)": "hsl(355, 100%, 74%)",
+        "Lightredtext": "hsl(356, 100%, 66%)",
+        "Verylightred": "hsl(355, 100%, 74%)",
         "Verydarkblue": "hsl(208, 49%, 24%)",
         // ### Neutral
         "White": "hsl(0, 0%, 100%)",

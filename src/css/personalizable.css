@@ -26,6 +26,11 @@
     color: var(--Verydarkblue);
 }
 
+.link__nav > a:hover{
+    transition: .5s ease-in-out;
+    text-decoration: underline;
+}
+
 .link__nav > a > i{
     color: var(--Verylightred);
     font-size: .7em;
@@ -78,6 +83,16 @@
     /* background-position: center top; */
 }
 
+.ul__list > li > a:hover {
+    font-weight: 500;
+
+}
+
+.footer__list > li > a:hover{
+    transition: .5s ease-in-out;
+    text-decoration: underline;
+}
+
 footer{
     border-radius: 0 6rem 0 0;
 }
@@ -101,7 +116,7 @@ footer{
         font-size: .7em;
     }
     .container__main{
-        background: linear-gradient(to bottom, var(--Verylightred), var(--Lightred)), url(../../images/bg-pattern-intro-desktop.svg) no-repeat;
+        background: linear-gradient(to right, var(--Verylightred), var(--Lightred)), url(../../images/bg-pattern-intro-desktop.svg) no-repeat;
         background-position: right;
         background-repeat: no-repeat;
         background-size: cover;

@@ -2,6 +2,8 @@
 const btnMenu = document.getElementById('menu');
 const iconMenu = document.querySelector('#menu i');
 const navContendor = document.getElementById('nav-contenedor');
+const main = document.getElementById('main');
+const footer = document.getElementById('footer');
 const navContent = document.getElementById('nav-content');
 const linksNav = document.querySelectorAll('#nav-link');
 const dropdownsContainers = document.querySelectorAll('#dropdown');
@@ -18,40 +20,37 @@ btnMenu.addEventListener('click', (e) =>{
     navContent.classList.toggle('nav__content--active');
     iconMenu.classList.toggle('fa-bars');
     iconMenu.classList.toggle('fa-close');
+
+    // Habilita o deshabilita el desplazamiento del body según el estado del menú
+    if (navContendor.classList.contains('nav__container--active')) {
+        document.body.classList.add('overflow-hidden');
+        main.classList.add('blur-sm');
+        footer.classList.add('blur-sm');
+    } else {
+        document.body.classList.remove('overflow-hidden');
+        main.classList.remove('blur-sm');
+        footer.classList.remove('blur-sm');
+    }
 });
 
 
 
 
 
-linksNav.forEach((links, i) => {
-    links.addEventListener('click', (e) => {
+linksNav.forEach((link, i) => {
+    link.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log(i);
-
         dropdownsContainers.forEach((drop, j) => {
-            if (j === i && drop.classList.contains('dropdown--active')) {
-                drop.classList.remove('dropdown--active');
+            if (j === i) {
+                drop.classList.toggle('dropdown--active');
+                const isDropdownActive = drop.classList.contains('dropdown--active');
+                arrow[i].classList.toggle('rotate-180', isDropdownActive);
             } else {
-                drop.classList.toggle('dropdown--active', j === i);
+                drop.classList.remove('dropdown--active');
+                arrow[j].classList.remove('rotate-180');
             }
         });
-
-        arrow.forEach((arrow, k) => arrow.classList.toggle('rotate-180', k === i));
     });
-
-    // links.addEventListener('mouseenter', () =>{
-    //     clearTimeout(timeoutIds[i]);
-    //     dropdownsContainers[i].classList.add('dropdown--active');
-    //     arrow.forEach((arrow, k) => arrow.classList.toggle('rotate-180', k === i));
-    // });
-    
-    // links.addEventListener('mouseout', () => {
-    //     timeoutIds[i] = setTimeout(() => {
-    //         dropdownsContainers[i].classList.remove('dropdown--active');
-    //     }, 300);
-    // });
-
 });
 
 
@@ -79,3 +78,17 @@ window.addEventListener('scroll', () => {
 
 
 
+window.addEventListener('resize', () => {
+    if(window.innerWidth >= 718){
+
+        const isMenuActive = document.querySelector('.nav__container--active');
+
+        if(isMenuActive){
+            navContendor.classList.remove('nav__container--active');
+            navContent.classList.remove('nav__content--active');
+            iconMenu.classList.remove('fa-close');
+            iconMenu.classList.add('fa-bars');
+            document.body.classList.remove('overflow-hidden');
+        }
+    }
+});
