@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <!-- STYLES IMPORTADOS TAILWINDS -->
+  <link rel="stylesheet" href="css/tailwind.css">
+  <!-- STYLES PERSONALIZABLES -->
+  <link rel="stylesheet" href="css/personalizable.css">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- FONTAWASOME ICONS -->
+  <script src="https://kit.fontawesome.com/766c25c2d0.js" crossorigin="anonymous"></script>
+
+ 
+</head>
+<body class="font-overpass">
+  
+  <!-- HEADER -->
+  <header class="top-0 fixed w-full transition-all duration-500 ease-in-out z-50" id="header">
+    <div class="w-[90%] mx-auto py-3 pt-14 md:pt-8 max-w-screen-2xl">
+      <!-- CONTAINER LOGO + NAV -->
+      <div class="flex justify-between items-center md:grid md:grid-cols-[70px,1fr] md:gap-10">
+        <!-- LOGO -->
+        <figure class="z-20">
+          <img src="../images/logo.svg" alt="Logo-Blogr" class="">
+        </figure>
+
+        <!-- CONTAINER NAV-->
+        <div class="fixed inset-0 bg-DesvanecidoBlack md:bg-transparent h-screen grid place-items-center font-ubuntu nav__container
+        md:static md:w-[unset] md:h-[unset]" id="nav-contenedor">
+          <div class="bg-White md:bg-transparent w-[90%] font-medium grid grid-rows-[1fr,150px] rounded-md h-[70%] nav__content
+          md:flex md:justify-between md:w-[100%] md:grid-cols-[1fr,100px] md:items-center md:h-[unset]" id="nav-content">
+            <!-- MENU DE NAVEGACION -->
+            <nav class="pt-7 md:pt-0 mx-auto w-10/12" id="nav-container">
+              <!-- LINKS-LISTAS PRINCIPALES -->
+              <div class="md:flex md:gap-6 md:text-sm">
+                <!-- PRODUCTO -->
+                <div class="">
+                  <li class="link__nav">
+                    <a href="" class="" id="nav-link">
+                      Product
+                      <i class="fa-solid fa-chevron-down text-[15px]"></i>
+                    </a>
+                  </li>
+                  <!-- DROPDOWN Product -->
+                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-5 md:bg-slate-100 top-full" id="dropdown">
+                    <!--- SUBMENU 1 -->     
+                    <ul class="grid gap-3 text-Verydarkdesaturatedblue/70 font-medium">
+                      <li class="">
+                        <a href="" class="">Overview</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Pricing</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Marketplace</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Features</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Integrations</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- COMPANY -->
+                <div class="">
+                  <li class="link__nav">
+                    <a href="" class="" id="nav-link">
+                      Company
+                      <i class="fa-solid fa-chevron-down text-[15px]"></i>
+                    </a>
+                  </li>
+                  <!-- DROPDOWN Company -->
+                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-5 md:bg-slate-100 top-full" id="dropdown">
+                    <!--- SUBMENU 1 -->     
+                    <ul class="grid gap-3 text-Verydarkdesaturatedblue/70 font-medium">
+                      <li class="">
+                        <a href="" class="">About</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Team</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Blog</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Careers</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>  
+                <!-- CONNECT -->
+                <div class="">
+                  <li class="link__nav">
+                    <a href="" class="" id="nav-link">
+                      Connect
+                      <i class="fa-solid fa-chevron-down text-[15px]"></i>
+                    </a>
+                  </li>
+                  <!-- DROPDOWN Connect -->
+                  <div class="bg-Grayishbluetext/20 py-4 text-center rounded-md dropdown md:absolute md:px-5 md:bg-slate-100 top-full" id="dropdown">
+                    <!--- SUBMENU 1 -->     
+                    <ul class="grid gap-3 text-Verydarkdesaturatedblue/70 font-medium">
+                      <li class="">
+                        <a href="" class="">Contact</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Newsletter</a>
+                      </li>
+                      <li class="">
+                        <a href="" class="">Linkedin</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div> 
+              </div>   
+            </nav>
+            <!-- CONTAINER LOGIN - SING -->
+            <div class="grid gap-3 md:text-sm md:py-0 md:flex mx-auto md:items-center text-lg md:w-[unset] w-10/12 border-t-2 py-6 border-Grayishbluetext md:border-0">
+              <button class="w-40 md:w-24 mx-auto md:text-White">Login</button>
+              <button class="w-40 md:w-24 mx-auto bg-gradient-to-r rounded-3xl md:py-2 from-Verylightred to-Lightred text-White md:bg-none md:bg-White md:text-Lightred">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BTN MENU -->
+        <a href="" class="text-White text-xl z-20 md:hidden" id="menu">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="">
+    <div class="grid gap-24">
+      <div class="container__main">
+        <div class="w-[90%] mx-auto py-32">
+          <!-- SECTION HEADER -->
+          <section class="text-center w-[90%] mx-auto grid gap-4 mt-10">
+            <h1 class="text-3xl md:text-4xl px-4 w-80 md:w-full md:w-96 md:px-0 mx-auto font-semibold text-White">A mordern publishing platform</h1>
+            <p class="text-White/80 w-72 md:w-full text-lg mx-auto">Grow you audience and build your online brand</p>
+            <div class="flex gap-5 justify-between mx-auto items-center mt-5">
+              <button class="bg-White text-Lightred font-semibold rounded-3xl py-2 px-3">Start for Free</button>
+              <button class="font-semibold text-White ring-2 ring-White rounded-3xl py-2 px-3">Learn More</button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Designed for the future container -->
+      <section class="grid gap-5 text-center md:text-left max-w-screen-2xl mx-auto">
+        <h2 class="text-2xl font-bold text-center text-Verydarkblue">Designed for the future</h2>
+        <div class="grid gap-8 md:grid-cols-[1fr,1fr] md:items-center"> 
+          <div class="md:col-start-2 md:col-end-3 md:row-start-1">
+            <img src="../images/illustration-editor-mobile.svg" alt="" class="block md:hidden">
+            <img src="../images/illustration-editor-desktop.svg" alt="" class="hidden md:block">
+          </div>
+          <div class="grid gap-8 md:col-start-1 md:col-end-2 md:row-start-1">
+            <div class="grid gap-4 w-[90%] mx-auto md:w-[80%]">
+              <h3 class="text-2xl w-48 mx-auto font-bold md:w-full md:mx-0 text-Verydarkblue">Introducing an extensible editor</h3>
+              <p class="px-4 leading-7 md:px-0 text-Verydarkgrayishblue">
+                Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+                change the looks of a blog.
+              </p>
+            </div>
+            <div class="grid gap-4 w-[90%] mx-auto md:w-[80%]">
+              <h3 class="text-2xl w-48 mx-auto font-bold md:w-full md:mx-0 text-Verydarkblue">Robust content management</h3>
+              <p class="px-4 leading-7 md:px-0 text-Verydarkgrayishblue">
+                Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+                by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- State container -->
+      <div class="state__container bg-no-repeat bg-right mt-32 h-[90%] md:h-[100%] box-border md:grid md:place-items-center">
+        <div class="grid grid-rows-[200px,1fr] max-w-screen-2xl mx-auto gap-12 md:gap-2 md:grid-cols-[auto,1fr] md:items-center md:w-[90%] pb-20 md:pb-0">
+          <img src="../images/illustration-phones.svg" alt="" class="relative bottom-40 w-[450px] md:bottom-0 lg:w-[512px] mx-auto md:mx-0">
+          <div class="text-center grid gap-4 md:text-left mt-8 md:mt-8 font-bold text-White">
+            <h3 class="text-3xl">State of the Art Infrastructure</h3>
+            <p class="px-6 md:px-0 font-medium text-lg md:px-0 md:w-[560px] text-White/80">
+              With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+              This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+            </p>
+          </div>
+        </div>
+      </div>
+
+        <!-- Free, open container -->
+        <section class="grid gap-5 text-center md:text-left mt-20 md:mt-44 max-w-screen-2xl mx-auto">
+          <div class="grid gap-8 md:grid-cols-[1fr,1fr] md:items-center"> 
+            <div class="">
+              <img src="../images/illustration-laptop-mobile.svg" alt="" class="block md:hidden">
+              <img src="../images/illustration-laptop-desktop.svg" alt="" class="hidden md:block">
+            </div>
+            <div class="grid gap-8">
+              <div class="grid gap-4 w-[90%] mx-auto md:w-[80%]">
+                <h3 class="text-2xl w-48 mx-auto text-Verydarkblue font-bold md:w-full md:mx-0">Free, open, simple</h3>
+                <p class="px-5 leading-7 md:px-0 text-Verydarkgrayishblue">
+                  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                </p>
+              </div>
+              <div class="grid gap-4 w-[90%] mx-auto md:w-[80%]">
+                <h3 class="text-2xl w-48 mx-auto text-Verydarkblue font-bold md:w-full md:mx-0">Powerful tooling</h3>
+                <p class="px-5 leading-7 md:px-0 text-Verydarkgrayishblue">
+                  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                  capable of producing even the most complicated sites.
+                </p>
+              </div>
+            </div>
+          </div>
+  
+        </section>
+    </div>
+  </main>
+
+  <footer class="bg-Verydarkblackblue mt-20 py-20">
+    <div class="grid justify-center gap-10 md:grid-cols-2 w-[90%] max-w-screen-2xl mx-auto">
+      <figure class="">
+        <img src="../images/logo.svg" alt="" class="">
+      </figure>
+  
+      <div class="grid gap-7 text-center md:text-left md:grid-cols-3">
+  
+        <div class="grid gap-4 grid-rows-[25px,1fr] justify-end">
+          <h4 class="text-White text-lg font-semibold">Product</h4>
+          <ul class="text-Grayishbluetext leading-7">
+            <li class="">
+              <a href="" class="">Overview</a>
+            </li>
+            <li class="">
+              <a href="" class="">Pricing</a>
+            </li>
+            <li class="">
+              <a href="" class="">Marketplace</a>
+            </li>
+            <li class="">
+              <a href="" class="">Features</a>
+            </li>
+            <li class="">
+              <a href="" class="">Integrations</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="grid gap-4 grid-rows-[25px,1fr] justify-end">
+          <h4 class="text-White text-lg font-semibold">Company</h4>
+          <ul class="text-Grayishbluetext leading-7 items-start">
+            <li class="">
+              <a href="" class="">About</a>
+            </li>
+            <li class="">
+              <a href="" class="">Team</a>
+            </li>
+            <li class="">
+              <a href="" class="">Blog</a>
+            </li>
+            <li class="">
+              <a href="" class="">Careers</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="grid gap-4 grid-rows-[25px,1fr] justify-end">
+          <h4 class="text-White text-lg font-semibold h-4">Connect</h4>
+          <ul class="text-Grayishbluetext leading-7">
+            <li class="">
+              <a href="" class="">Contact</a>
+            </li>
+            <li class="">
+              <a href="" class="">Newsletter</a>
+            </li>
+            <li class="">
+              <a href="" class="">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- SCRIPT FUNCIONAL -->
+  <script src="js/script.js"></script>
+</body>
+</html>

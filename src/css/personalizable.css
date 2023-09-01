@@ -1,0 +1,114 @@
+:root{
+    --Verydarkblue: hsl(208, 49%, 24%);
+    --Grayishbluetext: hsl(240, 2%, 79%);
+    --Verylightred: hsl(13, 100%, 72%, .9);
+    --Lightred: hsl(353, 100%, 62%, .9);
+    --Verydarkdesaturatedblue: hsl(237, 17%, 21%);
+
+
+}
+
+.link__nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: .3rem 0;
+}
+
+.link__nav > a{
+    text-align: end;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .3rem;
+    width: 94px;
+    font-size: 1.1em;
+    color: var(--Verydarkblue);
+}
+
+.link__nav > a > i{
+    color: var(--Verylightred);
+    font-size: .7em;
+}
+
+.nav__container{
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path .7s ease;
+}
+.nav__container--active{
+    clip-path: inset(0 0 0 0);
+    transition: clip-path .3s ease;
+}
+
+.nav__content{
+    clip-path: circle(0.7% at 50% 50%);
+    /* clip-path: inset(0 0 100% 0); */
+    transition: clip-path .5s ease;
+}
+.nav__content--active{
+    /* clip-path: inset(0 0 0 0); */
+    clip-path: circle(70.7% at 50% 50%);
+    transition: clip-path .6s ease;
+}
+
+.dropdown{
+    height: 0px;
+    clip-path: inset(0 0 100% 0);
+    transition: .5s ease;
+}
+
+.dropdown--active{
+    height: auto;
+    clip-path: inset(0 0 0 0);
+    transition: .5s ease;
+}
+
+.container__main{
+    border-radius: 0 0 0 5rem;
+    background: linear-gradient(to bottom, var(--Verylightred), var(--Lightred)), url(../../images/bg-pattern-intro-mobile.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.state__container{
+    border-radius: 0 5rem 0 5rem;
+    background: url(../../images/bg-pattern-circles.svg) no-repeat;
+    background-color: var(--Verydarkdesaturatedblue);
+    /* background-size: cover; */
+    /* background-position: center top; */
+}
+
+footer{
+    border-radius: 0 6rem 0 0;
+}
+
+@media (min-width: 48rem){
+    /*     header */
+    .nav__container{
+        clip-path: none;
+        transition: none;
+    }
+    .nav__content{
+        clip-path: none;
+        transition: none;
+    }
+
+    .link__nav > a{
+        color: white;
+    }
+    .link__nav > a > i{
+        color: white;
+        font-size: .7em;
+    }
+    .container__main{
+        background: linear-gradient(to bottom, var(--Verylightred), var(--Lightred)), url(../../images/bg-pattern-intro-desktop.svg) no-repeat;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .state__container{
+        border-radius: 0 4rem 0 4rem;
+    }
+    
+    
+}
